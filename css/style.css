@@ -84,14 +84,18 @@ img {
     margin: 0 auto;
     display: flex;
     flex-wrap:wrap;
-    background-color: black;
 }
 
 /* celle */
 .cell {
     flex-basis: calc(100% / 10);
+    background-color: black;
+    color: #fff;
     border: 2px solid #fff;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cell.clicked {

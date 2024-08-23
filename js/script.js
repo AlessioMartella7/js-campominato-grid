@@ -31,9 +31,10 @@ Note:
 
 // # FUNCTIONS
 
-function createCell () {
+function createCell (content) {
 const cell = document.createElement('div');
 cell.className = 'cell';
+cell.append(content);
 return cell;
 }
 
@@ -51,6 +52,8 @@ const cols = 10 ;
 const cells = rows * cols ;
 console.log(cells);
 
+//# Elaboration phase
+
 // aggiungo degli eventi al bottone
 
 buttonElement.addEventListener('click', function(e){
@@ -59,9 +62,12 @@ buttonElement.addEventListener('click', function(e){
 // creo un ciclo per generare le celle della griglia e individuarne il numero
     
     for(let i = 0; i < cells; i++) {
-        const cell = createCell();
+        const cell = createCell(i+1);
+
+        //rimando in pagina le celle
+        gridElement.appendChild(cell);
+       
     }
         
-
-
+    
 })
