@@ -18,6 +18,13 @@ header {
     padding: 15px;
 }
 
+footer { 
+    height: 60px;
+    background-color: #fff;
+    padding-left: 15px;
+   
+}
+
 h1 {
     display: inline-block;
     font-weight: 800;
@@ -57,4 +64,12 @@ img {
     padding: 5px 15px;
     border-radius: 15px;
     cursor: pointer;
+}
+
+.bottom-bar {
+    line-height: 60px;
+}
+
+.bottom-bar p {
+    vertical-align: middle;
 }
