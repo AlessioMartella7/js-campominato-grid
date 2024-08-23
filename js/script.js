@@ -58,30 +58,42 @@ const difficultyField = document.getElementById('difficulty');
 formElement.addEventListener('submit', function(e){
     e.preventDefault();
 
-    //preparo le costanti per la grandezza delle celle
-
-const difficulty = difficultyField.value ;
-
-let cells;
-
-switch(difficulty) {
-    case 'normal': 
-        cells = 7 * 7 ;
-        break;
-    case 'hard': 
-        cells = 9 * 9 ;
-        break;
-    case 'veryhard':
-        cells = 10 * 10 ;
-        break;
+    //prendo i valori delle option 
+    const difficulty = difficultyField.value ;
     
-}
-
-// creo un ciclo per generare le celle della griglia e individuarne il numero
+    //preparo le costanti per la grandezza delle celle
+    let cells;
+    
+    switch(difficulty) {
+        case 'normal': 
+            cells = 7 * 7 ;
+            break;
+        case 'hard': 
+            cells = 9 * 9 ;
+            break;
+        case 'veryhard':
+            cells = 10 * 10 ;
+            break;
+            
+        }
+        
+    // creo un ciclo per generare le celle della griglia e individuarne il numero
     for(let i = 0; i < cells; i++) {
-        const cell = createCell(i+1);
+        let cell = createCell(i+1);
 
-//# Output Phase
+    //# Output Phase
+        
+        switch(difficulty) {
+            case 'normal' :
+                cell.classList.add('normal');
+                break;
+            case 'hard' :
+                cell.classList.add('hard');
+                break;
+            case 'veryhard':
+                cell.classList.add('veryhard');
+            
+        }
 
         //rimando in pagina le celle
         gridElement.appendChild(cell);
