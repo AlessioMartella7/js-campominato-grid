@@ -45,17 +45,37 @@ return cell;
 //recupero gli elementi dal DOM
 const buttonElement = document.getElementById('play-btn');
 const gridElement = document.getElementById('grid');
+const formElement = document.querySelector('form');
+const difficultyField = document.getElementById('difficulty');
 
-//preparo le costanti per la grandezza delle celle
-const rows = 10 ;
-const cols = 10 ;
-const cells = rows * cols ;
+
 
 //# Elaboration phase
 
-// aggiungo degli eventi al bottone
-buttonElement.addEventListener('click', function(e){
+//!bonus
+// aggiungo degli eventi al form
+
+formElement.addEventListener('submit', function(e){
     e.preventDefault();
+
+    //preparo le costanti per la grandezza delle celle
+
+const difficulty = difficultyField.value ;
+
+let cells;
+
+switch(difficulty) {
+    case 'normal': 
+        cells = 7 * 7 ;
+        break;
+    case 'hard': 
+        cells = 9 * 9 ;
+        break;
+    case 'veryhard':
+        cells = 10 * 10 ;
+        break;
+    
+}
 
 // creo un ciclo per generare le celle della griglia e individuarne il numero
     for(let i = 0; i < cells; i++) {
