@@ -50,3 +50,18 @@ const rows = 10 ;
 const cols = 10 ;
 const cells = rows * cols ;
 console.log(cells);
+
+// aggiungo degli eventi al bottone
+
+buttonElement.addEventListener('click', function(e){
+    e.preventDefault();
+
+// creo un ciclo per generare le celle della griglia e individuarne il numero
+    
+    for(let i = 0; i < cells; i++) {
+        const cell = createCell();
+    }
+        
+
+
+})
