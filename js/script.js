@@ -21,7 +21,6 @@ Note:
 - questo bonus richiederà una riflessione extra per quel che riguarda il calcolo della larghezza delle celle  */
 
 
-
 // Recupero gli elementi dal DOM
 // preparo le costanti per la grandezza delle celle
 // preparo una funzione per generare una cella
@@ -34,7 +33,7 @@ Note:
 
 // # FUNCTIONS
 
-function createCell (content) {
+const createCell = content => {
 const cell = document.createElement('div');
 cell.className = 'cell';
 cell.append(content);
@@ -43,7 +42,7 @@ return cell;
 
 //# preparation phase
 
-//recupero gli elementi da DOM
+//recupero gli elementi dal DOM
 const buttonElement = document.getElementById('play-btn');
 const gridElement = document.getElementById('grid');
 
