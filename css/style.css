@@ -35,6 +35,8 @@ h1 {
 .container{
     max-width: 1000px;
     margin: 0 auto;
+    height: calc(100vh - 140px);
+    padding-top: 80px;
 }
 
 img {
@@ -72,4 +74,28 @@ img {
 
 .bottom-bar p {
     vertical-align: middle;
+}
+
+#grid {
+    height: 600px;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap:wrap;
+    background-color: black;
+
+}
+
+.cell {
+    flex-basis: calc(100% / 10);
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.cell.clicked {
+    background-color: lightblue;
+}
+
+.cell:hover {
+    transform: scale(1.1);
 }
