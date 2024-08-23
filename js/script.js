@@ -21,3 +21,13 @@ Note:
 - questo bonus richiederà una riflessione extra per quel che riguarda il calcolo della larghezza delle celle  */
 
 
+
+// Recupero gli elementi dal DOM
+// preparo le costanti per la grandezza delle celle della griglia
+// aggiungo degli eventi al bottone
+// preparo una funzione per generare una cella
+// creo un ciclo per generare le celle della griglia e individuarne il numero
+// aggiungo ad ogni cella una classe per colorarla al click e stampare in console il numero della stessa
+
+
+//# preparation phase
