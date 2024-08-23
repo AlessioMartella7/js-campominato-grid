@@ -23,11 +23,30 @@ Note:
 
 
 // Recupero gli elementi dal DOM
-// preparo le costanti per la grandezza delle celle della griglia
-// aggiungo degli eventi al bottone
+// preparo le costanti per la grandezza delle celle
 // preparo una funzione per generare una cella
+// aggiungo degli eventi al bottone
 // creo un ciclo per generare le celle della griglia e individuarne il numero
 // aggiungo ad ogni cella una classe per colorarla al click e stampare in console il numero della stessa
 
+// # FUNCTIONS
+
+function createCell () {
+const cell = document.createElement('div');
+cell.className = 'cell';
+return cell;
+}
 
 //# preparation phase
+
+//recupero gli elementi da DOM
+
+const buttonElement = document.getElementById('play-btn');
+const gridElement = document.getElementById('grid');
+
+//preparo le costanti per la grandezza delle celle
+
+const rows = 10 ;
+const cols = 10 ;
+const cells = rows * cols ;
+console.log(cells);
