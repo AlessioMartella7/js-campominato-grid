@@ -12,6 +12,17 @@ body{
     background-color: #7FFFD4;
 }
 
+header {
+    background-color: #fff;
+    height: 80px;
+    padding: 15px;
+}
+
+h1 {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 32px;
+}
 /* Utilities */
 
 .container{
@@ -19,3 +30,31 @@ body{
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+}
+
+.topbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 80px;
+    vertical-align: middle;
+}
+
+.topbar img {
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.left-bar {
+    display: flex;
+    align-items: center;
+}
+
+#playBtn {
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
