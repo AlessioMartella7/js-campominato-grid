@@ -27,7 +27,10 @@ Note:
 // preparo una funzione per generare una cella
 // aggiungo degli eventi al bottone
 // creo un ciclo per generare le celle della griglia e individuarne il numero
-// aggiungo ad ogni cella una classe per colorarla al click e stampare in console il numero della stessa
+// aggiungo un evento al click sulla cella
+// stampo in console il numero della cella
+// coloro la cella cliccata di azzurro
+
 
 // # FUNCTIONS
 
@@ -41,33 +44,39 @@ return cell;
 //# preparation phase
 
 //recupero gli elementi da DOM
-
 const buttonElement = document.getElementById('play-btn');
 const gridElement = document.getElementById('grid');
 
 //preparo le costanti per la grandezza delle celle
-
 const rows = 10 ;
 const cols = 10 ;
 const cells = rows * cols ;
-console.log(cells);
 
 //# Elaboration phase
 
 // aggiungo degli eventi al bottone
-
 buttonElement.addEventListener('click', function(e){
     e.preventDefault();
 
 // creo un ciclo per generare le celle della griglia e individuarne il numero
-    
     for(let i = 0; i < cells; i++) {
         const cell = createCell(i+1);
+
+//# Output Phase
 
         //rimando in pagina le celle
         gridElement.appendChild(cell);
        
+        //aggiungo un evento alla cella
+        cell.addEventListener('click', function(){
+
+            // stampo in console il numero della cella
+            console.log(i+1);
+
+            // coloro la cella cliccata di azzurro
+            cell.classList.toggle('clicked');
+
+        })
     }
         
-    
 })
